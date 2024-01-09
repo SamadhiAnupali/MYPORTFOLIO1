@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo">portfolio</a>
+
+        <i class='bx bx-menu'id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Samadhi Anupali</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Passionate about crafting seamless digital experiences that captivate and delight users. Committed to designing innovative solutions that blend creativity and functionality. Let's collaborate and innovate together to shape the future of user-centric design!
+            </p>
+            <div class="social-media">
+                <a href="https://web.facebook.com/samadhi.jayasinghe.712" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/samadhi_anupali/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/samadhi-anupali-65a25824b" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.behance.net/samadhianupali" target="_blank"><i class='bx bxl-behance'></i></a>
+            </div>
+           
+            <a href="images/Samadhi Jayasinghe UI UX.pdf" download="Samadhi_Anupali_CV.pdf" class="btn" target="_blank">Download CV</a>
+
+        </div>
+
+        <div class="home-img">
+            <img src="images/home.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/about.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p>I'm <b>Samadhi Anupali Jayasinghe</b>, an undergraduate at the <b>University of Moratuwa</b>, passionate about technology and exploring innovative solutions.</p>
+                <div class="about-section">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openSection(event, 'education')">Education</button>
+                        <button class="tablinks" onclick="openSection(event, 'experience')">Experience</button>
+                        <button class="tablinks" onclick="openSection(event, 'certification')">Certification</button>
+                    </div>
+                
+                    <!-- Tab content -->
+                    <div id="education" class="tabcontent">
+                            <ul>
+                                <li> <b>B.Sc.(Hons) in Information Technology & Management</b> |
+                                    University of Moratuwa | 3rd-year undergraduate - <span style="color: rgb(213, 213, 213); font-size: 14px;">Jun 2021- Present</span></li>
+                                <li> <b>G.C.E Advance Level</b> | Anamaduwa Central College  - <span style="color: rgb(213, 213, 213); font-size: 14px;">2017 - 2019</span> </li>
+                                <li> <b> G.C.E Ordinary Level</b> | Anamaduwa Central College - <span style="color: rgb(213, 213, 213); font-size: 14px;">2015 - 2016</span></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                
+                    <div id="experience" class="tabcontent">
+                        <ul>
+                            <li> <b>Intern UI/UX Designer </b> | Zynovatex
+                                 - <span style="color: rgb(213, 213, 213); font-size: 14px;">2023 Jun - Dec</span> <br> <br> Engaged as an Intern UI/UX Designer at Zynovatex, gaining hands-onexperience in crafting user-centric design solutions. 
+                                 Collaborating withteams, contributing to UI/UX projects, and applying theoretical knowledgeto real-world design challenges.</li>
+                        </ul>
+                    </div>
+                
+                    <div id="certification" class="tabcontent">
+                        <ul>
+                            <li> <b><a href="https://www.linkedin.com/posts/samadhi-anupali-65a25824b_python-universityofmoratuwa-activity-7054108559080361985-9fj6?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">Python for Beginners</a></b>  |
+                                Successfully completed the online learning program"
+                                    Python for Beginners
+                                    " Department of Computer Science& Engineering, Faculty of Engineering - University of Moratuwa - <span style="color: rgb(213, 213, 213); font-size: 14px;">2023</span></li>
+                            <li> <b><a href="https://www.linkedin.com/posts/samadhi-anupali-65a25824b_1000-free-courses-with-free-certificates-activity-7053258860337270784-Bbdo?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">UI / UX for Beginners</a></b> | successfully completed the "UI / UX for Beginners" course offered by Great Learning Academy - <span style="color: rgb(213, 213, 213); font-size: 14px;">2023</span> </li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+        
+        
+
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Show the default tab content (Education) and set the button as active
+          document.getElementById("education").style.display = "block";
+          document.querySelector(".tab button:nth-child(1)").classList.add("active");
+        });
+      
+        function openSection(evt, sectionName) {
+          var i, tabcontent, tablinks;
+          
+          // Hide all tab content
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+      
+          // Deactivate all tab links
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+          }
+          
+          // Show the selected section
+          document.getElementById(sectionName).style.display = "block";
+      
+          // Activate the clicked tablink
+          evt.currentTarget.classList.add("active");
+        }
+      </script>
+      
+    
+
+    <!-- services section design -->
+
+    <section class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bxl-figma'></i>
+            <h3>UI/UX Design</h3>
+            <p>"I specialize specifically in crafting user-centric UI/UX designs that flawlessly blend aesthetics with functionality. 
+                Through meticulous attention to precise prototyping, I create visually captivating 
+                and intuitive interfaces, always prioritizing user satisfaction.</p>
+            
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-code-alt' ></i>
+            <h3>Flyer Design</h3>
+            <p>I create visually striking, informative flyers for diverse purposes. 
+                Each design communicates effectively through compelling visuals and concise content, 
+                capturing attention and delivering clear messages for events, promotions, or marketing campaigns.</p>
+            
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-code-alt' ></i>
+            <h3>Frontend Development</h3>
+            <p>Focused on frontend development, I transform designs into interactive, responsive web experiences. 
+                Using HTML, CSS, and JavaScript, I ensure cross-device compatibility, clean code, accessibility, 
+                and optimal performance for engaging user interfaces.</p>
+            
+        </div>
+
+    </div>
+    </section>
+
+    <!-- portfolio section design -->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <ul class="tab-links">
+            <li><a href="#" data-filter="all">All</a></li>
+            <li><a href="#" data-filter="uiux">UI/UX</a></li>
+            <li><a href="#" data-filter="flyer">Flyer</a></li>
+            <li><a href="#" data-filter="frontend">Frontend</a></li>
+        </ul>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box" data-filter="uiux">
+                <img src="images/pro1.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>UI/UX Design</h4>
+                    <p><B>FIT SIXES | 2K23</B> 
+                        <br><H1><i>Admin Dashboard</i> </H1></p>
+                        <a href="fit_sixes_uiux.html"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-filter="uiux">
+                <img src="images/Smoothies.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>UI/UX Design</h4>
+                    <p> <B>Smoothies</B><br>
+                        <h1><i>3D Carousel Smart Animate</i></h1></p>
+                        <a href="smoothies.html"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-filter="uiux">
+                <img src="images/final soda.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>UI/UX Design</h4>
+                    <p> <b>FruitFizz</b><br>
+                        <h1><i>Smart Animate</i></h1>
+                    </p>
+                        <a href="FruitFizz.html"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-filter="flyer">
+                <img src="images/fe.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Frontend Developer</h4>
+                    <p>ss</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-filter="flyer">
+                <img src="images/final flyer..png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Flyer Design</h4>
+                    <p> Graphic & UI/UX</p><br>
+                    <h1><i>Advertisement</i></h1>
+                        <a href="flyer.html"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-filter="frontend">
+                <img src="images/fe.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Frontend Developer</h4>
+                    <p> ss</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+        </div>
+       
+        
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".tab-links a").click(function () {
+            $(".tab-links a").removeClass("active");
+            $(this).addClass("active");
+            
+            var selectedFilter = $(this).data("filter");
+            
+            $(".portfolio-box").hide();
+            if (selectedFilter === "all") {
+                $(".portfolio-box").show();
+            } else {
+                $(".portfolio-box[data-filter='" + selectedFilter + "']").show();
+            }
+        });
+    });
+</script>
+
+
+    <!--blog section design -->
+
+    <section class="blog" id="blog">
+        <h2 class="heading">Latest <span>Blog</span></h2> 
+        <div class="blog-container">
+            <div class="blog-box" >
+                <img src="images/thumb.png" alt="">
+                <div class="blog-layer">
+                    
+                    <p><B>Optimizing User Experience</B> 
+                        <br><h1>Crafting Thumb-Friendly UI Designs</h1></p>
+                        <a href="https://medium.com/@samadhianupali/optimizing-user-experience-crafting-thumb-friendly-ui-designs-169d3ff30a2b" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+        <p style="font-size: 1.7rem; margin-top: -4rem; line-height: 22px;">Explore my latest blog on crafting thumb-friendly <br>UI designs for seamless mobile experiences.</p>
+       
+        
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".tab-links a").click(function () {
+            $(".tab-links a").removeClass("active");
+            $(this).addClass("active");
+            
+            var selectedFilter = $(this).data("filter");
+            
+            $(".portfolio-box").hide();
+            if (selectedFilter === "all") {
+                $(".portfolio-box").show();
+            } else {
+                $(".portfolio-box[data-filter='" + selectedFilter + "']").show();
+            }
+        });
+    });
+</script>
+
+        </section>
+        
+    
+    
+    
+    </section>
+
+    <!-- contact section design -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Have a project in mind?</h3>
+                <p>If you have a project in mind or wish to collaborate on an exciting venture, I'm open to discussions! Let's bring your ideas to life and create something remarkable together.</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Want to work with me?</h3>
+                <p>Looking for a dedicated individual to contribute to your project? I'm eager to work on diverse projects and bring my expertise to the table. Let's explore how we can work together.</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Or any questions?</h3>
+                <p>Have any questions or simply want to say hello? Don't hesitate to reach out! I'm here to address your queries and assist in any way possible.</p>
+            </div>
+        </div>
+
+        <!-- <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" placeholder="Your Message" rows="10"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form> -->
+
+        <div class="contact-social-media">
+            <a href="mailto:samadhianupali@gmail.com" target="_blank"><i class="bx bxs-envelope"></i></a>
+            <a href="https://web.facebook.com/samadhi.jayasinghe.712" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/samadhi_anupali/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.linkedin.com/in/samadhi-anupali-65a25824b" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.behance.net/samadhianupali" target="_blank"><i class='bx bxl-behance'></i></a>
+        </div>
+        <p><i>samadhianupali@gmail.com</i></p>
+    </section>
+
+   <!--footer design--> 
+
+   <footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2024  | Samadhi Jayasinghe</p>
+
+    </div>
+
+    <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+   </footer>
+
+   <!--scroll reveal-->
+
+   <script src="https://unpkg.com/scrollreveal"></script>
+   
+   <!-- type js -->
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
